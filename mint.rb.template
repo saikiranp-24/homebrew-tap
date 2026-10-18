@@ -1,0 +1,31 @@
+class Mint < Formula
+  desc "CLI tool to generate boilerplate files and directories"
+  homepage "https://github.com/saikiranp-24/mint"
+  version "${VERSION}"
+
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/saikiranp-24/mint/releases/download/v${VERSION}/mint-v${VERSION}-aarch64-apple-darwin.tar.gz"
+      sha256 "${MAC_ARM_SHA}"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/saikiranp-24/mint/releases/download/v${VERSION}/mint-v${VERSION}-x86_64-apple-darwin.tar.gz"
+      sha256 "${MAC_INTEL_SHA}"
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/saikiranp-24/mint/releases/download/v${VERSION}/mint-v${VERSION}-aarch64-unknown-linux-glibc.tar.gz"
+      sha256 "${LINUX_ARM_SHA}"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/saikiranp-24/mint/releases/download/v${VERSION}/mint-v${VERSION}-x86_64-unknown-linux-glibc.tar.gz"
+      sha256 "${LINUX_INTEL_SHA}"
+    end
+  end
+
+  def install
+    bin.install "mint"
+  end
+end
