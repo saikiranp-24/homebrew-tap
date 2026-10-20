@@ -1,27 +1,27 @@
 class Mint < Formula
   desc "CLI tool to generate boilerplate files and directories"
   homepage "https://github.com/saikiranp-24/mint"
-  version "0.1.0-rc.1"
+  version "0.1.0-rc.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.1/mint-v0.1.0-rc.1-aarch64-apple-darwin.tar.gz"
-      sha256 "39fe04fab4acf227c80cc14f81487823429df2ec92dc3f66b63655558e340302"
+      url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.2/mint-v0.1.0-rc.2-aarch64-apple-darwin.tar.gz"
+      sha256 "ce2191d90840679fd1a18c893ae80e4cac0626d6c490e153774d34e4efecf7ad"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.1/mint-v0.1.0-rc.1-x86_64-apple-darwin.tar.gz"
-      sha256 "8164d31356340fdc3011d50fcc76d4f53e24c3608fd0d64e2e4fb8ff3c8b460d"
+      url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.2/mint-v0.1.0-rc.2-x86_64-apple-darwin.tar.gz"
+      sha256 "8fe3ca714c92ee2520ffd8e91a03dd2c7fe94512424f84bdf65653637389b1e4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.1/mint-v0.1.0-rc.1-aarch64-unknown-linux-glibc.tar.gz"
-      sha256 "426c14838ab9794e5c4a698685b2edf4a1bcc6a76f0e0b5c1056c52a0c8299ef"
+      url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.2/mint-v0.1.0-rc.2-aarch64-unknown-linux-glibc.tar.gz"
+      sha256 "773d72c9b37ff7557d69dcdf8e741913136c2280510b111fcdd6bfb706a5c8d8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.1/mint-v0.1.0-rc.1-x86_64-unknown-linux-glibc.tar.gz"
-      sha256 "20fe99a1f142f4a17dfef3fc920c4223890719ccd98ec04b01c034032eea8b79"
+      url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.2/mint-v0.1.0-rc.2-x86_64-unknown-linux-glibc.tar.gz"
+      sha256 "2fb499e4222e3f23c00adf28d3d86a66cbec5a9a8e0099c8d31546e4ed10fecc"
     end
   end
 
