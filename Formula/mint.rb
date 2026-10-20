@@ -6,22 +6,22 @@ class Mint < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.2/mint-v0.1.0-rc.2-aarch64-apple-darwin.tar.gz"
-      sha256 "ce2191d90840679fd1a18c893ae80e4cac0626d6c490e153774d34e4efecf7ad"
+      sha256 "db20a8a8653c74b1bd28731f153e51d8f5681da747dc714b1b681432980643ab"
     end
     if Hardware::CPU.intel?
       url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.2/mint-v0.1.0-rc.2-x86_64-apple-darwin.tar.gz"
-      sha256 "8fe3ca714c92ee2520ffd8e91a03dd2c7fe94512424f84bdf65653637389b1e4"
+      sha256 "828a1bf5ba43fd80e3d5f98e523413618320416c437ae96353b040d8bea9a9a9"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.2/mint-v0.1.0-rc.2-aarch64-unknown-linux-glibc.tar.gz"
-      sha256 "773d72c9b37ff7557d69dcdf8e741913136c2280510b111fcdd6bfb706a5c8d8"
+      sha256 "9f98a5c85284b417f32abf555d2605fdea57b394befd1852c03ae4ac8aa53347"
     end
     if Hardware::CPU.intel?
       url "https://github.com/saikiranp-24/mint/releases/download/v0.1.0-rc.2/mint-v0.1.0-rc.2-x86_64-unknown-linux-glibc.tar.gz"
-      sha256 "2fb499e4222e3f23c00adf28d3d86a66cbec5a9a8e0099c8d31546e4ed10fecc"
+      sha256 "2b9df4b39a1c324a9bf560cd41860033c5a045a277040878f9b4648938e0421e"
     end
   end
 
